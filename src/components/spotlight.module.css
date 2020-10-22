@@ -1,0 +1,14 @@
+.center {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  text-align: center;
+}
+
+.fauxImg {
+  border: 3px solid;
+  height: 350px;
+  width: 300px;
+}

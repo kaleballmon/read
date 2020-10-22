@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <div id="app">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div style={{ display: `block` }}>Hi</div>
+      {children}
     </div>
   )
 }
