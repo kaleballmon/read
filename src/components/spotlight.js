@@ -1,5 +1,5 @@
 import React from "react"
-import spotlightStyles from "./spotlight.module.css"
+import spotlightStyles from "../style-modules/spotlight.module.css"
 
 const Spotlight = () => {
   return (
