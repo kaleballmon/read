@@ -6,12 +6,20 @@ import headerStyles from "./header.module.css"
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
     <div className={headerStyles.headerContainer}>
-      <div className={headerStyles.home}>Read</div>
+      <Link to="/">
+        <span className={headerStyles.home}>Read</span>
+      </Link>
       <nav className={headerStyles.nav}>
         <ul className={headerStyles.navlist}>
-          <li className={headerStyles.navItem}>About</li>
-          <li className={headerStyles.navItem}>Contact</li>
-          <li className={headerStyles.navItem}>Readings</li>
+          <Link to="/">
+            <li className={headerStyles.navItem}>About</li>
+          </Link>
+          <Link to="/">
+            <li className={headerStyles.navItem}>Contact</li>
+          </Link>
+          <Link to="/">
+            <li className={headerStyles.navItem}>Readings</li>
+          </Link>
         </ul>
       </nav>
     </div>

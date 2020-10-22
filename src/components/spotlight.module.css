@@ -8,7 +8,14 @@
 }
 
 .fauxImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 3px solid;
   height: 350px;
   width: 300px;
+}
+
+.caption {
+  margin-top: 15px;
 }

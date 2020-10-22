@@ -6,7 +6,7 @@ const Spotlight = () => {
     <div className={spotlightStyles.center}>
       <figure>
         <div className={spotlightStyles.fauxImg}>A picture will be here</div>
-        <figcaption>
+        <figcaption className={spotlightStyles.caption}>
           reading spotlight
           <br />
           bookname
