@@ -1,0 +1,45 @@
+.header {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  text-transform: uppercase;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 55px;
+  background-color: #fff;
+  box-sizing: content-box;
+}
+
+.headerContainer {
+  padding: 0 55px;
+}
+
+.home {
+  display: block;
+  float: left;
+  width: 33.33%;
+  line-height: 55px;
+}
+
+.nav {
+  display: block;
+  width: 66.67%;
+  text-align: right;
+  float: left;
+  line-height: 55px;
+  white-space: nowrap;
+}
+
+.navlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  display: inline-block;
+  margin-right: 24px;
+}
