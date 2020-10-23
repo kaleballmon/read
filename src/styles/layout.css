@@ -7,3 +7,11 @@ body {
 #app {
   padding-top: 55px;
 }
+
+.centerStandalone {
+  display: flex;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

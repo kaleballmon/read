@@ -1,4 +1,4 @@
-.container {
+#contactContainer {
   margin: auto 0;
   display: flex;
   justify-content: center;
@@ -6,12 +6,4 @@
   border: 3px solid;
   height: 200px;
   width: 200px;
-}
-
-.center {
-  display: flex;
-  height: 450px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }

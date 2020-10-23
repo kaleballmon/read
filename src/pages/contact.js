@@ -5,8 +5,8 @@ import "../styles/contact.css"
 
 const Contact = () => (
   <Layout>
-    <div class="center">
-      <div class="container">Contact Info will go here</div>
+    <div class="centerStandalone">
+      <div id="contactContainer">Contact Info will go here</div>
     </div>
   </Layout>
 )

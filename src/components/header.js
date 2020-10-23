@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <nav className={headerStyles.nav}>
         <ul className={headerStyles.navlist}>
-          <Link to="/">
+          <Link to="/about/">
             <li className={headerStyles.navItem}>About</li>
           </Link>
           <Link to="/contact/">
