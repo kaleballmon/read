@@ -1,0 +1,12 @@
+#readingContainer {
+  display: block;
+  position: relative;
+  padding: 55px;
+}
+
+#catalog {
+  display: flex;
+  float: right;
+  width: 83%;
+  justify-content: center;
+}
