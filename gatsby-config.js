@@ -5,7 +5,7 @@ module.exports = {
 		{
 			resolve: `gatsby-source-mongodb`,
 			options: {
-				connectionString: `mongodb+srv://shell:${process.env.DB_KEY}@kluster.flfaf.mongodb.net`,
+				connectionString: process.env.DB_KEY,
 				dbName: `read`,
 				collection: [`authors`, `books`],
 			}
