@@ -7,7 +7,7 @@ module.exports = {
 			options: {
 				connectionString: `mongodb+srv://shell:${process.env.DB_KEY}@kluster.flfaf.mongodb.net`,
 				dbName: `read`,
-				collection: `authors`,
+				collection: [`authors`, `books`],
 			}
 		},
 	],
