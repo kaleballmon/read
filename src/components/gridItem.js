@@ -8,7 +8,7 @@ const GridItem = () => {
       <div className={gridItemStyles.gridBorder}>
         <p>This is an example of what a book will look like in a grid</p>
       </div>
-      <div className={gridItemStyles.gridItemCaption}>
+      <div>
         <p>
           Book Title <br></br>Author
         </p>
