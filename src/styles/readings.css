@@ -1,12 +1,23 @@
 #readingContainer {
   display: block;
   position: relative;
-  padding: 55px;
+  padding-left: 55px;
+  padding-top: 55px;
 }
 
 #catalog {
-  display: flex;
+  display: block;
   float: right;
   width: 83%;
+}
+
+#dropdown-container {
+  display: flex;
   justify-content: center;
+}
+
+#readings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3%;
 }
