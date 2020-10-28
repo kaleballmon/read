@@ -1,17 +1,19 @@
 import React from "react"
 import spotlightStyles from "../style-modules/spotlight.module.css"
 
-const Spotlight = () => {
+const Spotlight = ({ src, alt, title, author }) => {
   return (
     <div className={spotlightStyles.center}>
       <figure>
-        <div className={spotlightStyles.fauxImg}>A picture will be here</div>
+        <img src={src} alt={alt} height="350" width="270" />
         <figcaption className={spotlightStyles.caption}>
-          reading spotlight
+          <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
+            Reading Spotlight
+          </span>
           <br />
-          bookname
+          <span style={{ fontStyle: "italic" }}>{title}</span>
           <br />
-          author
+          {author}
         </figcaption>
       </figure>
     </div>

@@ -5,9 +5,9 @@ import sidebarStyles from "../style-modules/sidebar.module.css"
 const Sidebar = () => {
   return (
     <div className={sidebarStyles.container}>
-      <SidebarItem id="1" />
-      <SidebarItem id="2" />
-      <SidebarItem id="3" />
+      <SidebarItem id="1" name="All" />
+      <SidebarItem id="2" name="Authors" />
+      <SidebarItem id="3" name="Types" />
     </div>
   )
 }

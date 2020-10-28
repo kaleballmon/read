@@ -4,6 +4,7 @@ import Dropdown from "../components/dropdown"
 import Sidebar from "../components/sidebar"
 import GridItem from "../components/gridItem"
 import "../styles/readings.css"
+import photo from "../images/a-letter-to-my-nephew.jpg"
 
 const Readings = () => {
   return (
@@ -15,9 +16,12 @@ const Readings = () => {
             <Dropdown />
           </div>
           <div id="readings-grid">
-            <GridItem />
-            <GridItem />
-            <GridItem />
+            <GridItem
+              title="A Letter to My Nephew"
+              author="James Baldwin"
+              src={photo}
+              alt="Profile of James Baldwin"
+            />
           </div>
         </div>
       </div>

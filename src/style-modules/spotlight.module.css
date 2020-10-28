@@ -13,9 +13,10 @@
   justify-content: center;
   border: 3px solid;
   height: 350px;
-  width: 300px;
+  width: 270px;
 }
 
 .caption {
-  margin-top: 15px;
+  margin-top: 2px;
+  line-height: 25px;
 }

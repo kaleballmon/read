@@ -2,16 +2,13 @@ import React from "react"
 
 import gridItemStyles from "../style-modules/gridItem.module.css"
 
-const GridItem = () => {
+const GridItem = ({ src, alt, title, author }) => {
   return (
     <div className={gridItemStyles.gridItemContainer}>
-      <div className={gridItemStyles.gridBorder}>
-        <p>This is an example of what a book will look like in a grid</p>
-      </div>
-      <div>
-        <p>
-          Book Title <br></br>Author
-        </p>
+      <img src={src} alt={alt} height="200px" width="155px" />
+      <div className={gridItemStyles.gridCaption}>
+        <span style={{ fontStyle: "italic" }}>{title}</span> <br></br>
+        {author}
       </div>
     </div>
   )
