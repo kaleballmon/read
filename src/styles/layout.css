@@ -10,8 +10,9 @@ body {
 
 .centerStandalone {
   display: flex;
-  height: 450px;
+  margin-top: 175px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  line-height: 25px;
 }
