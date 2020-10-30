@@ -12,7 +12,11 @@ const About = () => {
           University. I'm sharing things that I've read that are cool to me or
           have informed who I am. There's not really a theme, and not much is
           similar. For anyone looking for my projects, you can head to my{" "}
-          <a href="https://github.com/kaleballmon" target="_blank">
+          <a
+            href="https://github.com/kaleballmon"
+            target="_blank"
+            rel="noreferrer"
+          >
             github
           </a>
           , where I keep all of that stuff.
