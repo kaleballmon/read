@@ -7,7 +7,7 @@ module.exports = {
       options: {
         connectionString: process.env.DB_KEY,
         dbName: `read`,
-        collection: [`authors`, `books`],
+        collection: [`authors`, `books`, `spotlight`],
       },
     },
     {
