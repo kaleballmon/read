@@ -1,50 +1,63 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import Dropdown from "../components/dropdown"
 import Sidebar from "../components/sidebar"
 import GridItem from "../components/gridItem"
+import { sortBooks } from "../actions/sortBooks"
+import { filterBooks } from "../actions/filterBooks"
 import { graphql } from "gatsby"
 import "../styles/readings.css"
 
 const Readings = ({ data }) => {
-  let books = data.allMongodbReadBooks.nodes
-  const imageFiles = data.allFile.nodes
+  /* create a books array that holds all books in array */
+  const [books] = useState(data.allMongodbReadBooks.nodes)
+
+  /* This is state that I can manipulate for displaying */
+  const [displayBooks, setDisplayBooks] = useState(books)
+
+  /* creates an array of author objects and sorts them for the sidebar */
+  const [authors] = useState(
+    data.allMongodbReadAuthors.nodes
+      .sort((author1, author2) => author1.name.localeCompare(author2.name))
+      .map(author => author.name)
+  )
+
+  /* get distinct types. do this by getting the unique values and then sort */
+  const [types] = useState(
+    [...new Set(books.map(book => book.type))].sort((type1, type2) =>
+      type1.localeCompare(type2)
+    )
+  )
+
+  /* have the image file nodes in arry to find */
+  const [imageFiles] = useState(data.allFile.nodes)
+
+  /* set state for sorting */
   const [sortBy, setSortBy] = useState(0)
 
-  const sortBooks = (option, books) => {
-    switch (parseInt(option)) {
-      case 1:
-        books.sort((book1, book2) => book1.author.localeCompare(book2.author))
-        break
-      case 2:
-        books.sort(
-          (book1, book2) => -1 * book1.author.localeCompare(book2.author)
-        )
-        break
-      case 3:
-        books.sort((book1, book2) => book1.title.localeCompare(book2.title))
-        break
-      case 4:
-        books.sort(
-          (book1, book2) => -1 * book1.title.localeCompare(book2.title)
-        )
-        break
-      default:
-        break
-    }
-  }
+  /* set state for filtering */
+  const [filter, setFilter] = useState({ by: "all", value: "all" })
 
-  sortBooks(sortBy, books)
+  /* this causes a book rerender on change of sorting. We only want to sort displayBooks to not mess up filtering */
+  useEffect(() => {
+    setDisplayBooks(sortBooks(sortBy, displayBooks))
+  }, [sortBy])
+
+  useEffect(() => {
+    setDisplayBooks(filterBooks(filter, books))
+  }, [filter])
+
+  /* this will cause a rerender whenever state changeds */
   return (
     <Layout>
       <div id="readingContainer">
-        <Sidebar />
+        <Sidebar authors={authors} types={types} setFilter={setFilter} />
         <div id="catalog">
           <div id="dropdown-container">
             <Dropdown setSortBy={setSortBy} />
           </div>
           <div id="readings-grid">
-            {books.map(book => (
+            {displayBooks.map(book => (
               <GridItem
                 title={book.title}
                 author={book.author}
@@ -76,6 +89,13 @@ export const data = graphql`
           filename
           alt
         }
+        isVisible
+      }
+    }
+    allMongodbReadAuthors {
+      nodes {
+        id
+        name
       }
     }
     allFile {

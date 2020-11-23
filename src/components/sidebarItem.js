@@ -1,13 +1,28 @@
 import React from "react"
 import sidebarItemStyles from "../style-modules/sidebarItem.module.css"
 
-const SidebarItem = ({ id, name }) => {
+const SidebarItem = ({ id, name, selection, subitems, setFilter }) => {
   return (
     <div className={sidebarItemStyles.tab}>
-      <input type="checkbox" id={id} />
+      <input
+        type="checkbox"
+        id={id}
+        onClick={() => {
+          if (selection === "all") setFilter({ by: "all", value: "all" })
+        }}
+      />
       <label htmlFor={id}> {name}</label>
-      <div className={sidebarItemStyles.content}>Yes this works</div>
-      <div className={sidebarItemStyles.content}>Cool</div>
+      {subitems.map(subitem => (
+        <div
+          key={subitem}
+          className={sidebarItemStyles.content}
+          onClick={() => {
+            setFilter({ by: selection, value: subitem })
+          }}
+        >
+          {subitem}
+        </div>
+      ))}
     </div>
   )
 }
