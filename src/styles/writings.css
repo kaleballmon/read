@@ -15,9 +15,3 @@
   display: flex;
   justify-content: center;
 }
-
-#readings-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 3%;
-}

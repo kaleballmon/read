@@ -1,24 +1,24 @@
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import React from "react"
 import headerStyles from "../style-modules/header.module.css"
 
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
     <div className={headerStyles.headerContainer}>
-      <Link to="/">
+      <AniLink swipe direction="left" to="/">
         <span className={headerStyles.home}>Read</span>
-      </Link>
+      </AniLink>
       <nav className={headerStyles.nav}>
         <ul className={headerStyles.navlist}>
-          <Link to="/about/">
+          <AniLink swipe direction="left" to="/about/">
             <li className={headerStyles.navItem}>About</li>
-          </Link>
-          <Link to="/contact/">
+          </AniLink>
+          <AniLink swipe direction="left" to="/contact/">
             <li className={headerStyles.navItem}>Contact</li>
-          </Link>
-          <Link to="/readings/">
-            <li className={headerStyles.navItem}>Readings</li>
-          </Link>
+          </AniLink>
+          <AniLink swipe direction="left" to="/writings/">
+            <li className={headerStyles.navItem}>Writings</li>
+          </AniLink>
         </ul>
       </nav>
     </div>

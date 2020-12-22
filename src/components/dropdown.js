@@ -17,10 +17,10 @@ const Dropdown = ({ setSortBy }) => {
           <option value="2">Author: Z → A</option>
           <option value="3">Title: A → Z</option>
           <option value="4">Title: Z → A</option>
-          {/* <option value="5">Release Date: Oldest → Newest</option>
-          <option value="6">Release Date: Newest → Oldest</option>
-          <option value="7">Post Date: Oldest → Newest</option>
-          <option value="8">Post Date: Newest → Oldest</option> */}
+          <option value="5">Publishing Date: Oldest → Newest</option>
+          <option value="6">Publishing Date: Newest → Oldest</option>
+          <option value="7">Posting Date: Oldest → Newest</option>
+          <option value="8">Posting Date: Newest → Oldest</option>
         </select>
       </label>
     </div>

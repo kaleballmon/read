@@ -3,19 +3,12 @@ require("dotenv").config({ path: __dirname + "/.env" })
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-source-mongodb`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        connectionString: process.env.DB_KEY,
-        dbName: `read`,
-        collection: [`authors`, `books`, `spotlight`],
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
+    `gatsby-plugin-transition-link`,
   ],
 }
