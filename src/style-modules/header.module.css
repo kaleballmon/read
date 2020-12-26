@@ -13,33 +13,28 @@
   box-sizing: content-box;
 }
 
-.headerContainer {
-  padding: 0 55px;
-}
-
 .home {
   display: block;
   float: left;
-  width: 33.33%;
+  max-width: 33.33%;
   line-height: 55px;
+  padding: 0px 55px;
 }
 
-.nav {
+.burger {
   display: block;
-  width: 66.67%;
-  text-align: right;
-  float: left;
-  line-height: 55px;
-  white-space: nowrap;
 }
 
-.navlist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.flatNav {
+  display: none;
 }
 
-.navItem {
-  display: inline-block;
-  margin-right: 24px;
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .flatNav {
+    display: block;
+  }
 }

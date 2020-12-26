@@ -1,0 +1,39 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 20px;
+  line-height: 55px;
+  margin-top: 1rem;
+  margin-right: 55px;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: black;
+}
+
+.bm-burger-bars-hover {
+  text-decoration: none;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 36px;
+  width: 36px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: black;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: white;
+  padding: 2.5em 1.5em 0;
+}
+
+.bm-item {
+  padding: 2em;
+}

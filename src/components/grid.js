@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect } from "react"
 import GridItem from "../components/gridItem"
 import gridStyles from "../style-modules/grid.module.css"
-import { useTransition, animated, config } from "react-spring"
+import { useTransition, animated } from "react-spring"
 
 export default function Grid({ writings }) {
   /* intermediate state has to be used to trigger the delayed transition */

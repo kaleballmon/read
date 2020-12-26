@@ -1,5 +1,5 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import { StaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
@@ -9,9 +9,9 @@ import sidebarStyles from "../style-modules/sidebar.module.css"
 const SidebarComponent = ({ data }) => {
   return (
     <div className={sidebarStyles.container}>
-      <AniLink swipe direction="left" to="/writings/">
+      <Link swipe direction="left" to="/writings/">
         <SidebarItem id="1" key="all" name="All" subitems={[]} />
-      </AniLink>
+      </Link>
       <SidebarItem
         id="2"
         key="authors"

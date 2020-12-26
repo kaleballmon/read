@@ -1,6 +1,6 @@
 import React from "react"
 import sidebarItemStyles from "../style-modules/sidebarItem.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 const SidebarItem = ({ id, name, subitems }) => {
   return (
@@ -15,9 +15,7 @@ const SidebarItem = ({ id, name, subitems }) => {
           .replace(/[\u0300-\u036f]/g, "")
         return (
           <div key={subitem} className={sidebarItemStyles.content}>
-            <AniLink swipe direction="left" to={`/writings/${slug}`}>
-              {subitem}
-            </AniLink>
+            <Link to={`/writings/${slug}`}>{subitem}</Link>
           </div>
         )
       })}
