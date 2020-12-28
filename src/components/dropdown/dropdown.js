@@ -1,6 +1,6 @@
 import React from "react"
 
-import dropdownStyles from "../style-modules/dropdown.module.css"
+import dropdownStyles from "./dropdown.module.css"
 
 const Dropdown = ({ setSortBy }) => {
   return (

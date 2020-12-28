@@ -1,6 +1,6 @@
 import React from "react"
 
-import gridItemStyles from "../style-modules/gridItem.module.css"
+import gridItemStyles from "./gridItem.module.css"
 
 const GridItem = ({ src, alt, title, author, key }) => {
   return (

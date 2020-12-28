@@ -1,4 +1,14 @@
-#aboutContainer {
-  width: 450px;
+.aboutContainer {
+  max-width: 60%;
   text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  .aboutContainer {
+    max-width: 540px;
+  }
+}
+
+#githubLink {
+  color: #c99868;
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import flatNavStyles from "../style-modules/flatNav.module.css"
+import flatNavStyles from "./flatNav.module.css"
 import { Link } from "gatsby"
 
 const FlatNav = () => (

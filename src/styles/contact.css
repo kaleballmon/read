@@ -1,7 +1,4 @@
-#contactContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+.contactContainer {
+  text-align: center;
+  max-width: 60%;
 }

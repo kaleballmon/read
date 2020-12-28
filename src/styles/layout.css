@@ -1,11 +1,17 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c99868;
+}
+
 body {
   margin: 0px;
   font-size: 16px;
   line-height: 15px;
-}
-
-#app {
-  padding-top: 55px;
+  outline: none;
 }
 
 .centerStandalone {
@@ -13,6 +19,9 @@ body {
   margin-top: 175px;
   justify-content: center;
   align-items: center;
-  text-align: center;
   line-height: 25px;
+}
+
+#app {
+  padding-top: 55px;
 }

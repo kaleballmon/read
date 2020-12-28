@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../templates/layout"
 import "../styles/404.css"
 import { Link } from "gatsby"
 

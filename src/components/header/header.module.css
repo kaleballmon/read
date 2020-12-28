@@ -25,15 +25,17 @@
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+
 .flatNav {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .burger {
-    display: none;
-  }
-
   .flatNav {
     display: block;
   }

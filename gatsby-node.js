@@ -1,7 +1,7 @@
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   createPage({
-    path: `/writings/`,
+    path: `/writings/all`,
     component: require.resolve(`./src/templates/writings.js`),
     context: { author: "*", type: "*" },
   })

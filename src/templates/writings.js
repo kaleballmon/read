@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
-import Layout from "../components/layout"
-import Dropdown from "../components/dropdown"
-import Sidebar from "../components/sidebar"
-import Grid from "../components/grid"
+import Layout from "./layout"
+import Dropdown from "../components/dropdown/dropdown.js"
+import Grid from "../components/grid/grid.js"
 import { graphql } from "gatsby"
 import { sortWritings } from "../actions/sortWritings"
 import "../styles/writings.css"
@@ -22,18 +21,14 @@ const Writings = ({ data, pageContext }) => {
   useEffect(() => {
     setWritings(sortWritings(sortBy, writings))
   }, [sortBy])
-  console.log(header)
   return (
     <Layout>
       <div id="readingContainer">
-        <Sidebar />
-        <div id="catalog">
-          <h1 style={{ textAlign: "center" }}>{header}</h1>
-          <div id="dropdown-container">
-            <Dropdown setSortBy={setSortBy} />
-          </div>
-          <Grid writings={writings} />
+        <h1 style={{ textAlign: "center" }}>{header}</h1>
+        <div id="dropdown-container">
+          <Dropdown setSortBy={setSortBy} />
         </div>
+        <Grid writings={writings} />
       </div>
     </Layout>
   )

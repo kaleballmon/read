@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useLayoutEffect } from "react"
-import GridItem from "../components/gridItem"
-import gridStyles from "../style-modules/grid.module.css"
+import React, { useEffect, useState } from "react"
+import GridItem from "./gridItem/gridItem.js"
+import gridStyles from "./grid.module.css"
 import { useTransition, animated } from "react-spring"
 
 export default function Grid({ writings }) {

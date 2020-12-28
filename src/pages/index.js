@@ -1,7 +1,7 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import Spotlight from "../components/spotlight"
+import Layout from "../templates/layout"
+import Spotlight from "../components/spotlight/spotlight.js"
 
 const IndexPage = ({ data }) => {
   return (
