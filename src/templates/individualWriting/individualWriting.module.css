@@ -1,0 +1,40 @@
+.caption {
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 100px;
+  height: 150%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.etc {
+  width: 60%;
+  line-height: 20px;
+  text-align: left;
+  align-self: auto;
+  margin-top: 55px;
+}
+
+.anchor {
+  color: #c99868;
+}
+
+.summary {
+  margin-top: 35px;
+  line-height: 20px;
+  width: 60%;
+  text-align: justify;
+}
+
+.title {
+  font-style: italic;
+}

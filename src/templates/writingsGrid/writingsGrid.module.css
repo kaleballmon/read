@@ -1,0 +1,23 @@
+.dropdownContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  margin-bottom: 15px;
+}
+
+.subheader {
+  width: 60%;
+  text-align: justify;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+.writingContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  justify-content: center;
+  align-items: center;
+}

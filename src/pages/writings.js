@@ -1,14 +1,14 @@
 import React from "react"
 import Layout from "../templates/layout"
 import "../styles/writingsLanding.css"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 const Writings = ({ data }) => {
   const authors = data.authors.distinct.sort((author1, author2) =>
     author1.localeCompare(author2)
   )
-  const types = data.types.distinct.sort((type1, type2) =>
-    type1.localeCompare(type2)
+  const forms = data.forms.distinct.sort((form1, form2) =>
+    form1.localeCompare(form2)
   )
   return (
     <Layout>
@@ -37,9 +37,9 @@ const Writings = ({ data }) => {
             </div>
           </div>
           <div className="subsection">
-            <h1 className="heading">Types</h1>
+            <h1 className="heading">Forms</h1>
             <div className="sublistContainer">
-              {types.map(subitem => {
+              {forms.map(subitem => {
                 const slug = subitem
                   .replace(/\s+/g, "")
                   .toLowerCase()
@@ -61,11 +61,11 @@ const Writings = ({ data }) => {
 
 export const data = graphql`
   query {
-    authors: allContentfulWriting {
-      distinct(field: author___name)
+    forms: allContentfulForm {
+      distinct(field: form)
     }
-    types: allContentfulWriting {
-      distinct(field: type)
+    authors: allContentfulAuthor {
+      distinct(field: name)
     }
   }
 `
