@@ -36,7 +36,7 @@ const WritingsGrid = ({ data, pageContext }) => {
             dangerouslySetInnerHTML={markdownify(subheader)}
           />
         )}
-        <div class={writingsGridStyles.dropdownContainer}>
+        <div className={writingsGridStyles.dropdownContainer}>
           <Dropdown setSortBy={setSortBy} />
         </div>
         <Grid writings={writings} />

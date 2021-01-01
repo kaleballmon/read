@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const FlatNav = () => (
   <nav id={flatNavStyles.flatNav}>
     <ul className={flatNavStyles.navlist}>
-      <Link to="/about/">
+      <Link to="/">
         <li className={flatNavStyles.navItem}>About</li>
       </Link>
       <Link to="/contact/">

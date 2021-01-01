@@ -38,20 +38,6 @@ export const sortWritings = (option, writings) => {
           Date.parse(writing1.datePublished) <
           Date.parse(writing2.datePublished)
       )
-    /* Posting Date: Oldest → Newest */
-    case 7:
-      return [...writings].sort(
-        (writing1, writing2) =>
-          Date.parse(writing1.datePublished) >
-          Date.parse(writing2.datePublished)
-      )
-    /* Posting Date: Newest → Oldest */
-    case 8:
-      return [...writings].sort(
-        (writing1, writing2) =>
-          Date.parse(writing1.datePublished) <
-          Date.parse(writing2.datePublished)
-      )
     default:
       return writings
   }

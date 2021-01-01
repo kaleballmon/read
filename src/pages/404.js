@@ -7,7 +7,10 @@ const Four = () => (
   <Layout>
     <div className="centerStandalone">
       <div id="fourContainer">
-        It seems like you're lost. <Link to="/">Let me help you.</Link>
+        It seems like you're lost.{" "}
+        <Link className="glowLink" to="/writings">
+          Let me help you.
+        </Link>
       </div>
     </div>
   </Layout>

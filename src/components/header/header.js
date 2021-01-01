@@ -6,12 +6,12 @@ import FlatNav from "./flatNav/flatNav.js"
 
 const Header = () => (
   <header className={headerStyles.header}>
-    <Link to="/">
+    <Link to="/spotlight">
       <span className={headerStyles.home}>Read</span>
     </Link>
     <span className={headerStyles.burger}>
       <Burger>
-        <Link to="/about/">About</Link>
+        <Link to="/">About</Link>
         <Link to="/contact/">Contact</Link>
         <Link to="/writings/">Writings</Link>
       </Burger>

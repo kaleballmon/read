@@ -1,14 +1,28 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import Layout from "../templates/layout"
-import Spotlight from "../components/spotlight/spotlight.js"
 
-const IndexPage = ({ data }) => {
+import "../styles/about.css"
+
+const About = () => {
   return (
     <Layout>
-      <Spotlight />
+      <div className="centerStandalone">
+        <div className="aboutContainer">
+          My name is Kaleb. I'm sharing things that I've read that are cool to
+          me or have informed who I am. I <em>usually</em> read a good bit, so
+          this will be updated often.
+          <br />
+          <br />
+          If you're just looking around, start by checking out the what's in the{" "}
+          <Link className="glowLink" to="/spotlight">
+            spotlight
+          </Link>
+          .
+        </div>
+      </div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default About
