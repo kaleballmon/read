@@ -5,5 +5,12 @@
   justify-content: center;
   align-items: center;
   line-height: 25px;
-  margin: 40px;
+  margin: 10px;
+  max-width: 160px;
+}
+
+@media screen and (min-width: 550px) {
+  .gridItemContainer {
+    margin: 40px;
+  }
 }
