@@ -17,8 +17,8 @@ const Dropdown = ({ setSortBy }) => {
           <option value="2">Author: Z → A</option>
           <option value="3">Title: A → Z</option>
           <option value="4">Title: Z → A</option>
-          <option value="5">Publishing Date: Oldest → Newest</option>
-          <option value="6">Publishing Date: Newest → Oldest</option>
+          <option value="5">Publishing Year: Oldest → Newest</option>
+          <option value="6">Publishing Year: Newest → Oldest</option>
         </select>
       </label>
     </div>

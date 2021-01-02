@@ -7,11 +7,6 @@ import markdownify from "../../actions/markdownify"
 
 const IndividualWriting = ({ data, pageContext }) => {
   const node = data.allContentfulWriting.nodes[0]
-  const options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }
 
   return (
     <Layout>
@@ -47,10 +42,7 @@ const IndividualWriting = ({ data, pageContext }) => {
               {node.form.form}
             </Link>
           </div>
-          <div>
-            Date Published:{" "}
-            {new Date(node.datePublished).toLocaleDateString("en-US", options)}
-          </div>
+          <div>Year Published: {node.yearPublished}</div>
         </div>
       </div>
     </Layout>
@@ -61,8 +53,7 @@ export const data = graphql`
   query($id: String) {
     allContentfulWriting(filter: { contentful_id: { eq: $id } }) {
       nodes {
-        dateAdded
-        datePublished
+        yearPublished
         title
         form {
           form

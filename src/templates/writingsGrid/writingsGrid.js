@@ -68,8 +68,7 @@ export const data = graphql`
           }
         }
         contentful_id
-        dateAdded
-        datePublished
+        yearPublished
       }
     }
   }

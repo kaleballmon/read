@@ -50,8 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query {
       allContentfulWriting {
         nodes {
-          dateAdded
-          datePublished
+          yearPublished
           title
           form {
             form
