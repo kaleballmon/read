@@ -42,7 +42,12 @@ const IndividualWriting = ({ data, pageContext }) => {
               {node.form.form}
             </Link>
           </div>
-          <div>Year Published: {node.yearPublished}</div>
+          <div>
+            Year Published:{" "}
+            {node.yearPublished > 0
+              ? node.yearPublished
+              : `c. ${node.yearPublished * -1} B.C.E.`}
+          </div>
         </div>
       </div>
     </Layout>
