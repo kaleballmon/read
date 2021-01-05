@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 import Layout from "../layout"
 import individualWritingStyles from "./individualWriting.module.css"
 import { slugify } from "../../actions/slugify"
@@ -47,6 +47,14 @@ const IndividualWriting = ({ data, pageContext }) => {
             {node.yearPublished > 0
               ? node.yearPublished
               : `c. ${node.yearPublished * -1} B.C.E.`}
+          </div>
+          <div
+            onClick={() => {
+              navigate(-1)
+            }}
+            className={individualWritingStyles.goBack}
+          >
+            Go Back
           </div>
         </div>
       </div>

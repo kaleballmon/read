@@ -38,3 +38,9 @@
 .title {
   font-style: italic;
 }
+
+.goBack {
+  cursor: pointer;
+  color: red;
+  padding-top: 25px;
+}

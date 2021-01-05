@@ -11,9 +11,9 @@ const Header = () => (
     </Link>
     <span className={headerStyles.burger}>
       <Burger>
+        <Link to="/writings/">Writings</Link>
         <Link to="/">About</Link>
         <Link to="/contact/">Contact</Link>
-        <Link to="/writings/">Writings</Link>
       </Burger>
     </span>
     <span className={headerStyles.flatNav}>
